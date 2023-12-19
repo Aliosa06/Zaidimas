@@ -24,7 +24,7 @@ public class Level1State extends GameState{
         tileMap.loadMap("/Maps/level1-1.map");
         tileMap.setPosition(0, 0);
 
-        bg = new Background()
+        bg = new Background("/Backgrounds/level1bg.png", 0.1);
 
     }
 
@@ -36,9 +36,7 @@ public class Level1State extends GameState{
     @Override
     public void draw(Graphics2D g) {
 
-       //valyti
-        g.setColor(Color.WHITE);
-       g.fillRect(0,0, GamePanel.WIDTH,GamePanel.HEIGHT);
+       bg.draw(g);
 
         // piesti tilemapa
 
